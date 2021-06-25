@@ -14,12 +14,12 @@ async def my_event_handler(event: NewMessage):
     except MessageIdInvalidError:
         pass
 
-async def fuck():
+async def read_dialogs():
     dialogs = client.iter_dialogs()
     async for dialog in dialogs:
         print(dialog)
 
 
 client.start()
-#client.loop.run_until_complete(fuck())
+client.loop.run_until_complete(read_dialogs())
 client.run_until_disconnected()
