@@ -11,9 +11,10 @@ API_HASH = os.getenv('API_HASH')
 
 PHONE = os.getenv('PHONE')
 USERNAME = os.getenv('USERNAME')
+CHANNEL_FROM = int(os.getenv('CHANNEL_FROM'))
+CHANNEL_TO = int(os.getenv('CHANNEL_TO'))
 
 _client = None
-
 
 async def get_client():
     global _client
